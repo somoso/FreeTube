@@ -45,6 +45,8 @@ if (isDev && process.platform === 'win32') {
   app.setAsDefaultProtocolClient('freetube')
 }
 
+app.on('window-all-closed', app.quit);
+
 // TODO: Uncomment if needed
 // only allow single instance of application
 if (!isDev) {
